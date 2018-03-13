@@ -25,14 +25,15 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>2.0</version>
 				<configuration>
-					<deploymentType>arm</deploymentType>
+					<deploymentType>server</deploymentType>
 					<username>Shanu_S</username>
 					<password>Shanu1992</password>
 					<applicationName>sampleApplicationFromJenkins</applicationName>
 					<!-- <target>usta-q-ma-esb-001</target> -->
 					<target>172.16.8.159</target>
 					<targetType>Server</targetType>
-					<environment>dmmule01d</environment>
+					<environment>Sandbox</environment>
+					<redeploy>true</redeploy>
 					<uri>https://anypoint.mulesoft.com</uri>
 					<armInsecure>true</armInsecure>
 				</configuration>
