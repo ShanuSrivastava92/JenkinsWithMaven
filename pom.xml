@@ -3,10 +3,10 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.mycompany</groupId>
-	<artifactId>sampleApplicationFromJenkins</artifactId>
+	<artifactId>sampleApp</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>mule</packaging>
-	<name>Mule sampleApplicationFromJenkins Application</name>
+	<name>Mule sampleApp Application</name>
 
     <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -28,7 +28,7 @@
 					<deploymentType>standalone</deploymentType>
 					<username>Shanu_S</username>
 					<password>Shanu1992</password>
-					<applicationName>sampleApplicationFromJenkins</applicationName>
+					<applicationName>sampleApp</applicationName>
 					<!-- <target>usta-q-ma-esb-001</target> -->
 					<target>172.16.8.159</target>
 					<environment>Sandbox</environment>
