@@ -31,7 +31,6 @@
 					<applicationName>sampleApplicationFromJenkins</applicationName>
 					<!-- <target>usta-q-ma-esb-001</target> -->
 					<target>172.16.8.159</target>
-					<targetType>Server</targetType>
 					<environment>Sandbox</environment>
 					<redeploy>true</redeploy>
 					<uri>https://anypoint.mulesoft.com</uri>
