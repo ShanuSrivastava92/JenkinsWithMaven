@@ -244,10 +244,10 @@
 	
 	<distributionManagement>
     <repository>
-        <id>mulesoft-releases1</id>
-            <name>MuleSoft Releases Repository1</name>
-            <url>http://repository.mulesoft.org/releases/</url>
-            <layout>default</layout>
+			<id>mulesoft-nexus1</id>
+        	<name>Mulesoft Nexus Repository1</name>
+        	<url>https://repository.mulesoft.org/nexus/content/repositories/public/</url>
+        	<layout>default</layout>
     </repository>
 </distributionManagement>
 
