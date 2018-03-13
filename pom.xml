@@ -25,15 +25,13 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>2.0</version>
 				<configuration>
-					<deploymentType>cloudhub</deploymentType>
+					<deploymentType>arm</deploymentType>
 					<username>ShanuSrivastava92</username>
 					<password>Shanu1992</password>
-					<applicationName>sample-app-test</applicationName>
-					<!-- <target>usta-q-ma-esb-001</target> -->
+					<applicationName>sample-app-test22</applicationName>
 					<environment>Sandbox</environment>
 					<redeploy>true</redeploy>
 					<uri>https://anypoint.mulesoft.com</uri>
-					<armInsecure>true</armInsecure>
 				</configuration>
 				<executions>
 					<execution>
