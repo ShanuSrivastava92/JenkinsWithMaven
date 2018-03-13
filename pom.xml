@@ -28,7 +28,7 @@
 					<deploymentType>arm</deploymentType>
 					<username>ShanuSrivastava92</username>
 					<password>Shanu1992</password>
-					<applicationName>sample-app-test22</applicationName>
+					<applicationName>sample-app-test</applicationName>
 					<environment>Sandbox</environment>
 					<redeploy>true</redeploy>
 					<uri>https://anypoint.mulesoft.com</uri>
