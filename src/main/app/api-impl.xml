@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" version="EE-3.8.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+
+	<!-- flow is triggered from apikit router -->
+	
+	<flow name="get:/account:api-config">
+    	<set-variable value="#[message.inboundProperties['http.query.params'].id]" variableName="accountId" doc:name="accountId" />
+        
+        <!-- Third party service call over http -->
+        <http:request config-ref="HTTP_Request_Configuration" path="guideonesample" method="GET" doc:name="HTTP_Request">
+            <http:request-builder>
+                <http:query-param paramName="accountId" value="#[flowVars.accountId]"/>
+            </http:request-builder>
+        </http:request>
+        
+        <!-- Response validation using choice router -->
+    	<choice>
+    		<when expression="#[json:id]">
+    			<logger level="INFO" message="success"/>
+    		</when>
+    		<otherwise>
+    			<set-payload value="{&quot;status&quot;:&quot;failure&quot;}" mimeType="application/json" doc:name="Set Error Payload"/>
+    		</otherwise>
+    	</choice>
+    	<exception-strategy ref="exception-handlingChoice_Exception_Strategy" doc:name="Reference Exception Strategy"/>
+    </flow>
+</mule>
