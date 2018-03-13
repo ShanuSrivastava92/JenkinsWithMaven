@@ -241,5 +241,14 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
+	
+	<distributionManagement>
+    <repository>
+        <id>mulesoft-releases1</id>
+            <name>MuleSoft Releases Repository1</name>
+            <url>http://repository.mulesoft.org/releases/</url>
+            <layout>default</layout>
+    </repository>
+</distributionManagement>
 
 </project>
